@@ -9,11 +9,11 @@ class PagesController < ApplicationController
   end
   
   def index
-    @books.all
+    @books=Book.all
   end
 
   def show
-    @book=Book.find(1)
+    @book = Book.find(params[:id])
   end
   
   def edit
